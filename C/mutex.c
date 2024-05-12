@@ -18,12 +18,15 @@ void *message (void *arg) {
 
 int main () {
     pthread_mutex_init(&lock, NULL);
+    
     for (int id = 1; id <= 50; id++) {
       pthread_create(&(threadId[id]), NULL, message, NULL);
     }
+    
     for (int id = 0; id < 5; id++) {
         pthread_join(threadId[id], NULL);
     }
+    
     pthread_mutex_destroy(&lock);
 
     return 0;
