@@ -3,7 +3,7 @@
 ; But I'd rather keep what little is left of my sanity
 
 SECTION .data                                ; variables
-msg     db      "Hello, world!", 0Ah
+msg      db      "Hello, world!", 0Ah
 size     equ      $ -msg
  
 SECTION .text                                ; code
